@@ -1,0 +1,12 @@
+<!--The whole content below can be removed with the new code.-->
+<a [routerLink]="['/home']">主页</a>
+<a [routerLink]="['/product', 1]">商品详情</a>
+<input type="button" value="商品详情" (click)="toProductDetails()" >
+<a [routerLink]="[{outlets:{primary: 'home', aux: 'chat'}}]">开始聊天</a>
+<a [routerLink]="[{outlets:{aux: null}}]">结束聊天</a>
+
+<div class="clear">
+  <router-outlet></router-outlet>
+  <router-outlet name="aux"></router-outlet>
+</div>
+
